@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import SummaryCard from "./components/summaryCard.jsx";
 import Charts from "./components/Charts.jsx";
-import transactionTable from "./components/transactionTable.jsx";
+import TransactionTable from "./Transactiontable.jsx";
 import Insights from "./components/Insights.jsx";
 import RoleSwitcher from "./components/RoleSwitcher.jsx";
 import DarkModeToggle from "./components/DarkModeToggle.jsx";
@@ -95,7 +95,7 @@ function DashboardContent() {
 
         {/* Transactions Section */}
         <div>
-          <transactionTable
+          <TransactionTable
             data={transactions}
             role={role}
             onAddTransaction={handleAddTransaction}
