@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light mode variables */
+  :root {
+    --bg-primary: 249, 250, 251;
+    --bg-secondary: 255, 255, 255;
+    --text-primary: 17, 24, 39;
+    --text-secondary: 75, 85, 99;
+    --border-color: 229, 231, 235;
+  }
+
+  /* Dark mode variables */
+  .dark {
+    --bg-primary: 17, 24, 39;
+    --bg-secondary: 31, 41, 55;
+    --text-primary: 243, 244, 246;
+    --text-secondary: 156, 163, 175;
+    --border-color: 55, 65, 81;
+  }
+
+  body {
+    @apply transition-colors duration-300 ease-in-out;
+    background-color: rgb(var(--bg-primary));
+    color: rgb(var(--text-primary));
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-white/50 dark:border-gray-700/50 shadow-lg;
+  }
+  
+  .glass-card {
+    @apply glass rounded-2xl transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .glass-card-dark {
+    @apply bg-gray-800/70 backdrop-blur-lg border border-gray-700/50 shadow-lg rounded-2xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 dark:bg-indigo-500 text-white rounded-xl hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-xl hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full p-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:transform hover:scale-[1.02] transition-all duration-300 cursor-pointer;
+  }
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-300 dark:bg-indigo-600 rounded-full hover:bg-indigo-400 dark:hover:bg-indigo-500;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Dark mode specific animations */
+.dark .glass-card {
+  @apply bg-gray-800/70 border-gray-700/50;
+}
+
+/* Gradient text for dark mode */
+.dark .gradient-text {
+  @apply bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent;
+}
