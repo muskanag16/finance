@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Sparkles } from 'lucide-react';
-import { useDarkMode } from '../context/DarkModeContext';
+import { useDarkMode } from '../context/DarkModeContext.jsx';
 
 export default function DarkModeToggle() {
   const { isDark, toggleDarkMode } = useDarkMode();

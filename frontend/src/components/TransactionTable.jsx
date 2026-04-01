@@ -5,7 +5,7 @@ import {
   DollarSign, Tag, ArrowUpDown, ChevronDown, ChevronUp, 
   TrendingUp, TrendingDown, Layers, Zap 
 } from "lucide-react";
-import { useDarkMode } from "../context/DarkModeContext";
+import { useDarkMode } from "../context/DarkModeContext.jsx";
 
 export default function TransactionTable({ data, role, onAddTransaction, onDeleteTransaction, onEditTransaction }) {
   const { isDark } = useDarkMode();

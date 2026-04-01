@@ -279,8 +279,8 @@ import {
   CartesianGrid,
 } from "recharts";
 // import { groupByMonth, categoryData, runningBalance } from "../utils/helpers";
-import { groupByMonth,categoryData,runningBalance } from "../utils/helper";
-import { useDarkMode } from "../context/DarkModeContext";
+import { groupByMonth,categoryData,runningBalance } from "../utils/helper.js";
+import { useDarkMode } from "../context/DarkModeContext.jsx";
 
 const COLORS = ["#6366f1", "#22c55e", "#f59e0b", "#ef4444", "#8b5cf6", "#ec489a", "#14b8a6"];
 const DARK_COLORS = ["#818cf8", "#4ade80", "#fbbf24", "#f87171", "#a78bfa", "#f472b6", "#2dd4bf"];

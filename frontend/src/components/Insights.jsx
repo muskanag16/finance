@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 // import { getHighestSpending, getMonthlyComparison, calculateSummary } from "../utils/helpers";
 
 import { TrendingUp, AlertCircle, Award, Zap, TrendingDown, PieChart, DollarSign, Target, Sparkles, Import } from "lucide-react";
-import { useDarkMode } from "../context/DarkModeContext";
-import { calculateSummary, getHighestSpending, getMonthlyComparison } from "../utils/helper";
+import { useDarkMode } from "../context/DarkModeContext.jsx";
+import { calculateSummary, getHighestSpending, getMonthlyComparison } from "../utils/helper.js";
 
 export default function Insights({ data }) {
   const { isDark } = useDarkMode();
