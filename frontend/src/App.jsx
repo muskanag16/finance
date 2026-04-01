@@ -1,15 +1,15 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import SummaryCard from "./components/summaryCard";
-import Charts from "./components/Charts";
-import TransactionTable from "./components/transactionTable";
-import Insights from "./components/Insights";
-import RoleSwitcher from "./components/RoleSwitcher";
-import DarkModeToggle from "./components/DarkModeToggle";
-import { transactions as initialTransactions } from "./data/mockData";
-import { calculateSummary } from "./utils/helper";
-import { useLocalStorage } from "./hooks/useLocalStorage";
-import { DarkModeProvider, useDarkMode } from "./context/DarkModeContext";
+import SummaryCard from "./components/summaryCard.jsx";
+import Charts from "./components/Charts.jsx";
+import TransactionTable from "./components/transactionTable.jsx";
+import Insights from "./components/Insights.jsx";
+import RoleSwitcher from "./components/RoleSwitcher.jsx";
+import DarkModeToggle from "./components/DarkModeToggle.jsx";
+import { transactions as initialTransactions } from "./data/mockData.jsx";
+import { calculateSummary } from "./utils/helper.js";
+import { useLocalStorage } from "./hooks/useLocalStorage.jsx";
+import { DarkModeProvider, useDarkMode } from "./context/DarkModeContext.jsx";
 
 function DashboardContent() {
   const [transactions, setTransactions] = useLocalStorage("transactions", initialTransactions);
