@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import { useDarkMode } from "../context/DarkModeContext.jsx";
 
-export default function TransactionTable({ data, role, onAddTransaction, onDeleteTransaction, onEditTransaction }) {
+export default function transactionTable({ data, role, onAddTransaction, onDeleteTransaction, onEditTransaction }) {
   const { isDark } = useDarkMode();
   const [search, setSearch] = useState("");
   const [filterType, setFilterType] = useState("all");
